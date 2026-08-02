@@ -260,7 +260,7 @@ img {
 .theme-toggle,
 .menu-toggle {
   width: 44px;
-  background: var(--surface-solid);
+  background: white;
   border-color: var(--line);
 }
 
@@ -550,4 +550,127 @@ img {
   .footer-content {
     text-align: center;
   }
+}
+
+
+.contact-page {
+  padding: 2rem 0 3rem;
+}
+
+.contact-hero {
+  min-height: calc(100vh - 180px);
+  display: grid;
+  align-items: center;
+}
+
+.contact-shell {
+  padding: 2.5rem;
+  border-radius: 36px;
+  border: 1px solid var(--line);
+  background: var(--surface-solid);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.contact-shell h1 {
+  margin: 0 0 1rem;
+  font-family: "Instrument Serif", serif;
+  font-size: var(--text-hero);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.contact-intro {
+  max-width: 56ch;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.contact-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.45rem;
+  min-height: 170px;
+  padding: 1.4rem;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.contact-label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.contact-card strong {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.contact-note {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.contact-footer-note {
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 960px) {
+  .contact-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-shell {
+    padding: 1.5rem;
+    border-radius: 28px;
+  }
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 0.8rem;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contact-card:hover .contact-icon {
+  transform: translateY(-2px) scale(1.05);
+  transition: transform 0.25s ease;
 }
