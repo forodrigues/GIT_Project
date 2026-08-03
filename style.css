@@ -1,7 +1,7 @@
 :root,
 [data-theme="light"] {
   --bg: #f4f1eb;
-  --surface: rgba(255, 255, 255, 0.58);
+  --surface: rgba(85, 174, 226, 0.58);
   --surface-solid: #ffffff;
   --text: #1f1b17;
   --text-muted: #6f695f;
@@ -31,7 +31,7 @@
 
 [data-theme="dark"] {
   --bg: #0a0a0a;
-  --surface: rgba(23, 24, 28, 0.72);
+  --surface: rgba(85, 174, 226, 0.58);
   --surface-solid: #010b63;
   --text: #f3eee7;
   --text-muted: #b5aea3;
@@ -833,7 +833,7 @@ img {
   background-color: var(--topbar);
 }
 
-/* PROJECTS PAGE */
+/* PROJECTS PAGE -*/
 
 .projects-timeline-section {
   padding: 1rem 0 3rem;
