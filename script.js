@@ -4,9 +4,11 @@ const themeIcon = document.querySelector(".theme-icon");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 
-let currentTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-  ? "dark"
-  : "light";
+const savedTheme = localStorage.getItem("theme");
+
+let currentTheme =
+  savedTheme ||
+  (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
 root.setAttribute("data-theme", currentTheme);
 updateThemeIcon(currentTheme);
@@ -15,6 +17,7 @@ if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     currentTheme = currentTheme === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", currentTheme);
+    localStorage.setItem("theme", currentTheme);
     updateThemeIcon(currentTheme);
   });
 }

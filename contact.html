@@ -3,6 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+  (function () {
+    try {
+      const savedTheme = localStorage.getItem("theme");
+      const theme =
+        savedTheme ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+  })();
+  </script>
   <title>Contact | Fábio Rodrigues</title>
   <meta
     name="description"

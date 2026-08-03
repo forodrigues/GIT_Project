@@ -4,13 +4,14 @@
   --surface: rgba(255, 255, 255, 0.58);
   --surface-solid: #ffffff;
   --text: #1f1b17;
-  --muted: #6f695f;
-  --line: #d6cfc4;
-  --primary: #0f6c68;
-  --primary-hover: #0a5451;
+  --text-muted: #6f695f;
+  --border-color: #d6cfc4;
+  --accent: #0f6c68;
+  --accent-hover: #0a5451;
   --white: #ffffff;
   --topbar: #6f97e2;
   --hover: #ffffff;
+
   --radius-sm: 12px;
   --radius-md: 20px;
   --radius-lg: 32px;
@@ -33,16 +34,17 @@
   --surface: rgba(23, 24, 28, 0.72);
   --surface-solid: #010b63;
   --text: #f3eee7;
-  --muted: #b5aea3;
-  --line: #35312c;
-  --primary: #59b8b0;
-  --primary-hover: #73c7c0;
+  --text-muted: #b5aea3;
+  --border-color: #35312c;
+  --accent: #59b8b0;
+  --accent-hover: #73c7c0;
+  --white: #ffffff;
   --topbar: #010b63;
   --hover: #ffffff;
+
   --shadow-sm: 0 8px 25px rgba(0, 0, 0, 0.18);
   --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
-
 *,
 *::before,
 *::after {
