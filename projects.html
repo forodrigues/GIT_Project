@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        const theme =
+          savedTheme ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      }
+    })();
+  </script>
+
+  <title>Projects | Fábio Rodrigues</title>
+  <meta
+    name="description"
+    content="Projetos, investigação, estágios e experiências de Fábio Rodrigues."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container topbar">
+      <a href="index.html" class="brand" aria-label="Homepage de Fábio Rodrigues">
+        <span class="brand-mark">FR</span>
+        <span class="brand-text">Fábio Rodrigues</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-menu">
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Work and Research</p>
+        <h1>Projects</h1>
+        <p class="page-intro">
+          Research, internships and applied work in biomedical engineering, computer vision and medical imaging.
+        </p>
+      </div>
+    </section>
+
+    <section class="projects-timeline-section">
+      <div class="container">
+        <div class="projects-timeline">
+
+          <!-- Erasmus Internship -->
+          <article class="timeline-project">
+            <div class="timeline-date">
+              <span>2026</span>
+            </div>
+
+            <div class="timeline-line">
+              <span class="timeline-dot"></span>
+            </div>
+
+            <div class="timeline-content">
+                <article class="timeline-card timeline-item timeline-item-clickable">
+
+                <p class="timeline-tag">Internship</p>
+                <h2>Erasmus Internship — UZ Leuven</h2>
+                <p class="timeline-meta">Leuven, Belgium · Sep 2025 – Feb 2026</p>
+
+                <span>
+                  Collaborated with a multidisciplinary team to develop AI solutions for 2D and 3D medical imaging, focusing on predicting Levator Avulsion.
+                </span>
+
+                <span>
+                  Developed deep learning models for highly imbalanced datasets using PyTorch, MONAI and timm, and implemented domain adaptation techniques for multi-site data robustness.
+                </span>
+
+                <div class="project-skills" aria-label="Tecnologias e competências usadas">
+                  <span class="project-pill">PyTorch</span>
+                  <span class="project-pill">MONAI</span>
+                  <span class="project-pill">timm</span>
+                  <span class="project-pill">Deep Learning</span>
+                  <span class="project-pill">Medical Imaging</span>
+                  <span class="project-pill">Domain Adaptation</span>
+                  <span class="project-pill">2D/3D Imaging</span>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          
+          <!-- Research Grant Holder -->
+          <article class="timeline-project">
+            <div class="timeline-date">
+              <span>2024</span>
+            </div>
+
+            <div class="timeline-line">
+              <span class="timeline-dot"></span>
+            </div>
+
+            <div class="timeline-content">
+                <article class="timeline-card timeline-item timeline-item-clickable">
+
+                <p class="timeline-tag">Research Grant</p>
+                <h2>Research Grant Holder — INESC TEC</h2>
+                <p class="timeline-meta">Porto, Portugal · Oct 2024 – Feb 2025</p>
+
+                <span>
+                  Development of a semi-automatic platform for calcium scoring in cardiac computed tomography.
+                </span>
+
+                <span>
+                  The platform allowed clinicians to annotate possible calcification areas to validate and improve neural network performance for automatic detection.
+                </span>
+
+                <div class="project-skills" aria-label="Tecnologias e competências usadas">
+                  <span class="project-pill">Python</span>
+                  <span class="project-pill">Neural Networks</span>
+                  <span class="project-pill">Cardiac CT</span>
+                  <span class="project-pill">Annotation Tools</span>
+                  <span class="project-pill">Deep Learning</span>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <!-- Biomedical Imaging Lab -->
+          <article class="timeline-project">
+            <div class="timeline-date">
+              <span>2024</span>
+            </div>
+
+            <div class="timeline-line">
+              <span class="timeline-dot"></span>
+            </div>
+
+            <div class="timeline-content">
+              <article class="timeline-card timeline-item timeline-item-clickable">
+                  <p class="timeline-tag">Biomedical Imaging</p>
+                  <h2>Intern at the Biomedical Imaging Laboratory — INESC TEC</h2>
+                  <p class="timeline-meta">Porto, Portugal · Feb 2024 – Sep 2024</p>
+
+                  <span>
+                    Developed a neural network using an unsupervised approach for patient re-identification in chest X-ray images.
+                  </span>
+
+                  <span>
+                    The work focused on training optimization, data transformation strategies and comparison between unsupervised and supervised contrastive learning.
+                  </span>
+
+                </a>
+
+                <div class="project-skills" aria-label="Tecnologias e competências usadas">
+                  <span class="project-pill">Chest X-ray</span>
+                  <span class="project-pill">Contrastive Learning</span>
+                  <span class="project-pill">PyTorch</span>
+                  <span class="project-pill">Unsupervised Learning</span>
+                  <span class="project-pill">Image Processing</span>
+                  <span class="project-pill">Re-identification</span>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <!-- ANEEB -->
+          <article class="timeline-project">
+            <div class="timeline-date">
+              <span>2024</span>
+            </div>
+
+            <div class="timeline-line">
+              <span class="timeline-dot"></span>
+            </div>
+
+            <div class="timeline-content">
+                <article class="timeline-card timeline-item timeline-item-clickable">
+
+                <p class="timeline-tag">Student Association</p>
+                <h2>Associate at the Department of External Relations — ANEEB</h2>
+                <p class="timeline-meta">Portugal · Dec 2023 – Dec 2024</p>
+
+                <span>
+                  Responsible for liaising with companies and external entities to secure support for biomedical events organized nationwide.
+                </span>
+
+                <span>
+                  Contributed to initiatives such as hackathons, the National Conference of Biomedical Engineering and volunteer activities.
+                </span>
+
+                <div class="project-skills" aria-label="Tecnologias e competências usadas">
+                  <span class="project-pill">Communication</span>
+                  <span class="project-pill">Partnerships</span>
+                  <span class="project-pill">Event Organization</span>
+                  <span class="project-pill">Networking</span>
+                  <span class="project-pill">External Relations</span>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <!-- NUADA -->
+          <article class="timeline-project">
+            <div class="timeline-date">
+              <span>2023</span>
+            </div>
+
+            <div class="timeline-line">
+              <span class="timeline-dot"></span>
+            </div>
+
+            <div class="timeline-content">
+                <article class="timeline-card timeline-item timeline-item-clickable">
+
+                <p class="timeline-tag">Summer Internship</p>
+                <h2>Summer Internship — NUADA</h2>
+                <p class="timeline-meta">Jul 2023 – Sep 2023</p>
+
+                <span>
+                  Assisted in the development and testing of exoskeleton and sensor systems, gaining practical experience in sensor functionality.
+                </span>
+
+                <span>
+                  Also developed an understanding of key considerations for marketing medical products, including performance, regulatory compliance and user needs.
+                </span>
+
+                <div class="project-skills" aria-label="Tecnologias e competências usadas">
+                  <span class="project-pill">Exoskeletons</span>
+                  <span class="project-pill">Sensors</span>
+                  <span class="project-pill">Medical Devices</span>
+                  <span class="project-pill">Product Development</span>
+                  <span class="project-pill">Regulatory Compliance</span>
+                  <span class="project-pill">Testing</span>
+                </div>
+              </article>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container topbar">
+      <p>© 2026 Fábio Rodrigues</p>
+      <div class="footer-links"></div>
+    </div>
+  </footer>
+</body>
+</html>
