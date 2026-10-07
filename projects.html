@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
     (function () {
+      document.documentElement.classList.add("js");
       try {
         const savedTheme = localStorage.getItem("theme");
         const theme =
@@ -44,26 +45,35 @@
         <span class="brand-text">Fábio Rodrigues</span>
       </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="site-menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <nav class="site-nav" id="site-menu">
         <a href="projects.html" aria-current="page">Projects</a>
         <a href="education.html">Education</a>
         <a href="contact.html">Contact</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar tema">
-          <span class="theme-icon">🌙</span>
-        </button>
       </nav>
+
+      <div class="topbar-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </button>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -71,7 +81,7 @@
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">Work and Research</p>
-        <h1>Projects</h1>
+        <h1><span class="line"><span>Projects</span></span></h1>
         <p class="page-intro">
           Research, internships and applied work in biomedical engineering, computer vision and medical imaging.
         </p>
@@ -81,7 +91,7 @@
     <section class="projects-timeline-section">
       <div class="container">
         <div class="projects-timeline">
-          <article class="timeline-project">
+          <article class="timeline-project" data-reveal>
             <div class="timeline-date">
               <span>2026</span>
             </div>
@@ -114,7 +124,7 @@
             </div>
           </article>
           <!-- Erasmus Internship -->
-          <article class="timeline-project">
+          <article class="timeline-project" data-reveal>
             <div class="timeline-date">
               <span>2025</span>
             </div>
@@ -153,7 +163,7 @@
 
           
           <!-- Research Grant Holder -->
-          <article class="timeline-project">
+          <article class="timeline-project" data-reveal>
             <div class="timeline-date">
               <span>2024</span>
             </div>
@@ -191,7 +201,7 @@
           </article>
 
           <!-- Biomedical Imaging Lab -->
-          <article class="timeline-project">
+          <article class="timeline-project" data-reveal>
             <div class="timeline-date">
               <span>2024</span>
             </div>
@@ -214,8 +224,6 @@
                     The work focused on training optimization, data transformation strategies and comparison between unsupervised and supervised contrastive learning.
                   </span>
 
-                </a>
-
                 <div class="project-skills" aria-label="Tecnologias e competências usadas">
                   <span class="project-pill">Python</span>
                   <span class="project-pill">Unsupervised Learning</span>
@@ -229,7 +237,7 @@
           </article>
 
           <!-- ANEEB -->
-          <article class="timeline-project">
+          <article class="timeline-project" data-reveal>
             <div class="timeline-date">
               <span>2024</span>
             </div>
@@ -265,7 +273,7 @@
           </article>
 
           <!-- NUADA -->
-          <article class="timeline-project">
+          <article class="timeline-project" data-reveal>
             <div class="timeline-date">
               <span>2023</span>
             </div>
@@ -307,9 +315,13 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container topbar">
+    <div class="container footer-content">
       <p>© 2026 Fábio Rodrigues</p>
-      <div class="footer-links"></div>
+      <div class="footer-links">
+        <a href="mailto:fabioorodrigues03@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/f%C3%A1bio-rodrigues-b05b95277/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/forodrigues" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 </body>

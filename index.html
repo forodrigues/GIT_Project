@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
   (function () {
+    document.documentElement.classList.add("js");
     try {
       const savedTheme = localStorage.getItem("theme");
       const theme =
@@ -43,112 +44,199 @@
         <span class="brand-text">Fábio Rodrigues</span>
       </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="site-menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <nav class="site-nav" id="site-menu">
         <a href="projects.html">Projects</a>
         <a href="education.html">Education</a>
         <a href="contact.html">Contact</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar tema">
-          <span class="theme-icon">🌙</span>
-        </button>
       </nav>
+
+      <div class="topbar-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </button>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="main" class="hero-main">
-    <section class="hero-shell">
-      <div class="container hero-card">
-        <p class="eyebrow hero-top"> ML/AI Engineer • Biomedical Engineer</p>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">ML/AI Engineer • Biomedical Engineer</p>
 
-        <div class="hero-grid">
-          <div class="text-box">
-            <h1>Fábio <br /> Rodrigues</h1>
-            <p class="hero-text">
+          <h1 class="hero-title">
+            <span class="line"><span>Fábio</span></span>
+            <span class="line"><span><em>Rodrigues</em></span></span>
+          </h1>
+
+          <p class="hero-lead">
             I have experience developing AI pipelines, mainly focused on the medical field and computer vision.
-            </p>
-            <p class="hero-text">
+          </p>
+          <p class="hero-text">
             I am interested in building reliable solutions that can also be applied to other domains, such as robotics, autonomous driving, industry, and more.
-            </p>
-            <p class="hero-text">
+          </p>
+          <p class="hero-text">
             I am always eager to learn new concepts in the field and learn from more experienced people.
-            </p>
-            
-            </div>
+          </p>
 
-          <div class="hero-image-wrap">        
-            <img
-              src="images/myimage.jpeg"
-              alt="Retrato criativo de Fábio Rodrigues"
-              class="hero-image"
-            />
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="projects.html">View projects <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrap" data-tilt>
+            <span class="hero-image-bg hero-image-bg-1"></span>
+            <span class="hero-image-bg hero-image-bg-2"></span>
+
+            <div class="hero-frame">
+              <div class="hero-frame-clip">
+                <img
+                  src="images/myimage.jpeg"
+                  alt="Retrato criativo de Fábio Rodrigues"
+                  class="hero-image"
+                  width="1089"
+                  height="1444"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Computer Vision</span>
+        <span>Medical Imaging</span>
+        <span>Deep Learning</span>
+        <span>Domain Adaptation</span>
+        <span>AI Pipelines</span>
+        <span>Contrastive Learning</span>
+        <span>Biomedical Engineering</span>
+        <span>2D/3D Imaging</span>
+      </div>
+    </div>
+
+    <section class="section skills-section">
+      <div class="container">
+        <div class="section-heading skills-head" data-reveal>
+          <p class="eyebrow">Toolbox</p>
+          <h2>Skills</h2>
+        </div>
+
+        <div class="stack-groups">
+          <div class="stack-group" data-reveal>
+            <p class="stack-title">Languages</p>
+            <div class="skills-list">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Matlab</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">HTML</span>
+              <span class="skill-pill">CSS</span>
+            </div>
           </div>
 
-          <div class="text-box">
-            <p class="skills">Skills:</p>
-            <div class="stack-groups">
-            <div class="stack-group">
-                <p class="stack-title">Programming Languages</p>
-                <div class="skills-list">
-                <span class="skill-pill skill-pill--pro">Python</span>
-                <span class="skill-pill skill-pill--pro">Matlab</span>
-                <span class="skill-pill skill-pill--learning">C++</span>
-                <span class="skill-pill skill-pill--learning">HTML</span>
-                <span class="skill-pill skill-pill--learning">CSS</span>
-                <span class="skill-pill skill-pill--learning">SQL</span>
-                </div>
+          <div class="stack-group" data-reveal>
+            <p class="stack-title">Libraries</p>
+            <div class="skills-list">
+              <span class="skill-pill">pytorch</span>
+              <span class="skill-pill">timm</span>
+              <span class="skill-pill">huggingface</span>
+              <span class="skill-pill">monai</span>
+              <span class="skill-pill">pandas</span>
+              <span class="skill-pill">numpy</span>
+              <span class="skill-pill">optuna</span>
             </div>
-
-            <div class="stack-group">
-                <p class="stack-title">Libraries</p>
-                <div class="skills-list">
-                <span class="skill-pill skill-pill--pro">pytorch</span>
-                <span class="skill-pill skill-pill--pro">timm</span>
-                <span class="skill-pill skill-pill--pro">huggingface</span>
-                <span class="skill-pill skill-pill--pro">monai</span>
-                <span class="skill-pill skill-pill--pro">pandas</span>
-                <span class="skill-pill skill-pill--pro">optuna</span>
-                <span class="skill-pill skill-pill--pro">numpy</span>
-
-                </div>
-            </div>
-
-            <div class="stack-group">
-                <p class="stack-title">Learning</p>
-                <div class="skills-list">
-                <span class="skill-pill skill-pill--learning">AWS</span>
-                <span class="skill-pill skill-pill--learning">Docker</span>
-                <span class="skill-pill skill-pill--learning">Kubernetes</span>
-                </div>
-            </div>
-            </div>
-
           </div>
+
+          <div class="stack-group" data-reveal>
+            <p class="stack-title">AI Skillset</p>
+            <div class="skills-list">
+              <span class="skill-pill">RAG</span>
+              <span class="skill-pill">Claude</span>
+              <span class="skill-pill">Agentic AI</span>
+              <span class="skill-pill">Prompt Engineering</span>
+              <span class="skill-pill">Computer Vision</span>
+            </div>
+          </div>
+
+          <div class="stack-group" data-reveal>
+            <p class="stack-title">Cloud &amp; MLOps</p>
+            <div class="skills-list">
+              <span class="skill-pill">AWS</span>
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub Actions</span>
+              <span class="skill-pill">HPC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section explore">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Explore</p>
+          <h2>More about my work</h2>
+        </div>
+
+        <div class="explore-grid">
+          <a class="explore-card" href="projects.html" data-reveal>
+            <span class="explore-index">01</span>
+            <h3>Projects</h3>
+            <p>Research, internships and applied work in biomedical engineering, computer vision and medical imaging.</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="explore-card" href="education.html" data-reveal>
+            <span class="explore-index">02</span>
+            <h3>Education</h3>
+            <p>My academic background, complementary experiences, and participation in events and competitions.</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="explore-card" href="contact.html" data-reveal>
+            <span class="explore-index">03</span>
+            <h3>Contact</h3>
+            <p>Reach me to talk about new opportunities, research, projects or collaborations.</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  
-    <footer class="site-footer">
-    <div class="container topbar">
-        <p>© 2026 Fábio Rodrigues</p>
-        <div class="footer-links">
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Fábio Rodrigues</p>
+      <div class="footer-links">
+        <a href="mailto:fabioorodrigues03@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/f%C3%A1bio-rodrigues-b05b95277/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/forodrigues" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
-    </footer>
-
+  </footer>
 </body>
-
-
 </html>
